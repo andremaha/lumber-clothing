@@ -8,6 +8,10 @@ pipeline {
                     echo "Hello, Step Two"
                     ls -lah
                 '''
+                sh '''
+                    echo "Hello, Step Three"
+                    pwd
+                '''
             }
         }
         stage('build') {
