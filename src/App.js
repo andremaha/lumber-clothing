@@ -2,6 +2,7 @@ import './App.css';
 import { Switch, Route } from "react-router-dom";
 import React from "react";
 
+
 import Homepage from './pages/homepage/homepage.component';
 import ShopPage from "./components/shop/shop.component";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
