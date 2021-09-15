@@ -5,7 +5,7 @@ import CustomButton from "../custom-button/custom-button.component";
 
 import { auth, createUserProfileDocument } from "../../firebase/firebase.utils";
 
-import './sign-up.styles.sass';
+import './sign-up.styles.scss';
 
 class SignUp extends  React.Component {
     constructor(props) {
@@ -31,9 +31,25 @@ class SignUp extends  React.Component {
 
         try {
             const { user } = await auth.createUserWithEmailAndPassword(email, password);
-        } catch(error) {
 
+            await createUserProfileDocument(user, { displayName });
+
+            this.setState({
+                displayName: '',
+                email: '',
+                password: '',
+                confirmPassword: ''
+            });
+
+        } catch(error) {
+            console.error("Could not create a user: ", error.message);
         }
+    }
+
+    handleChange = event => {
+        const { value, name } = event.target;
+
+        this.setState({ [name]: value } );
     }
 
     render() {
