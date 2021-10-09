@@ -4,8 +4,8 @@ import React from "react";
 import { connect } from "react-redux";
 import {createStructuredSelector} from "reselect";
 
-
 import Homepage from './pages/homepage/homepage.component';
+import Contact from "./pages/contact/contact.component";
 import ShopPage from "./components/shop/shop.component";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
 import Checkout from "./pages/checkout/checkout.component";
@@ -44,14 +44,13 @@ class App extends React.Component {
         this.unsubscribeFromAuth();
     }
 
-
-
     render() {
         return (
             <div>
                 <Header />
                 <Switch>
                     <Route exact path='/' component={Homepage} />
+                    <Route exact path='/contact' component={Contact} />
                     <Route  path='/shop' component={ShopPage} />
                     <Route exact path='/signin' render={() => this.props.currentUser ? (<Redirect to='/' />) : (<SignInAndSignUpPage />)} />
                     <Route exact path='/checkout' component={Checkout} />
