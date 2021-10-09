@@ -1,6 +1,6 @@
 # Lumber Store
 
-[DEMO]()
+[DEMO](https://lumber-clothing.herokuapp.com)
 
 A full-fledged e-commerce application that showcases my current knowledge of the following tech stack:
 
