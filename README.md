@@ -13,3 +13,4 @@ A full-fledged e-commerce application that showcases my current knowledge of the
   * Email/Password Authentication
 * [Firestore Database](https://firebase.google.com/docs/firestore)
 * [Stripe Checkout](https://github.com/azmenak/react-stripe-checkout)
+* [Styled Components](https://styled-components.com/)
